@@ -12,7 +12,8 @@ class NetworkManager {
     private init() {}
     
     func fetchMonitorAll() async throws -> [StoreOverview] {
-        guard let url = URL(string: "https://monitor.zangtee.vn/api-monitor-all") else {
+        let urlString = AppConfig.monitorAllURL
+        guard !urlString.isEmpty, let url = URL(string: urlString) else {
             throw NetworkError.invalidURL
         }
         
@@ -23,7 +24,8 @@ class NetworkManager {
     }
     
     func fetchStoreDetail(storeId: Int) async throws -> StoreDetailResponse {
-        guard let url = URL(string: "https://monitor.zangtee.vn/api-monitor?store_id=\(storeId)") else {
+        let urlString = AppConfig.monitorStoreURL + "\(storeId)"
+        guard !AppConfig.monitorStoreURL.isEmpty, let url = URL(string: urlString) else {
             throw NetworkError.invalidURL
         }
         

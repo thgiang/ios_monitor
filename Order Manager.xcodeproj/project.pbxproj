@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9B649F4B2F4DEAF800EC57E6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B649F4A2F4DEAF800EC57E6 /* WidgetKit.framework */; };
+		9B649F4D2F4DEAF800EC57E6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B649F4C2F4DEAF800EC57E6 /* SwiftUI.framework */; };
+		9B649F5E2F4DEAFA00EC57E6 /* OrderMonitorWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9B649F482F4DEAF800EC57E6 /* OrderMonitorWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B649F5C2F4DEAFA00EC57E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B649F062F4DD4D300EC57E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B649F472F4DEAF800EC57E6;
+			remoteInfo = OrderMonitorWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B649F5F2F4DEAFA00EC57E6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9B649F5E2F4DEAFA00EC57E6 /* OrderMonitorWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9B649F0E2F4DD4D300EC57E6 /* Order Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Order Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B649F482F4DEAF800EC57E6 /* OrderMonitorWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OrderMonitorWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B649F4A2F4DEAF800EC57E6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9B649F4C2F4DEAF800EC57E6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9B649F622F4DEAFA00EC57E6 /* Exceptions for "OrderMonitorWidget" folder in "OrderMonitorWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9B649F472F4DEAF800EC57E6 /* OrderMonitorWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9B649F102F4DD4D300EC57E6 /* Order Manager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Order Manager";
+			sourceTree = "<group>";
+		};
+		9B649F4E2F4DEAF800EC57E6 /* OrderMonitorWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9B649F622F4DEAFA00EC57E6 /* Exceptions for "OrderMonitorWidget" folder in "OrderMonitorWidgetExtension" target */,
+			);
+			path = OrderMonitorWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B649F452F4DEAF800EC57E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B649F4D2F4DEAF800EC57E6 /* SwiftUI.framework in Frameworks */,
+				9B649F4B2F4DEAF800EC57E6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				9B649F102F4DD4D300EC57E6 /* Order Manager */,
+				9B649F4E2F4DEAF800EC57E6 /* OrderMonitorWidget */,
+				9B649F492F4DEAF800EC57E6 /* Frameworks */,
 				9B649F0F2F4DD4D300EC57E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				9B649F0E2F4DD4D300EC57E6 /* Order Manager.app */,
+				9B649F482F4DEAF800EC57E6 /* OrderMonitorWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9B649F492F4DEAF800EC57E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B649F4A2F4DEAF800EC57E6 /* WidgetKit.framework */,
+				9B649F4C2F4DEAF800EC57E6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				9B649F0A2F4DD4D300EC57E6 /* Sources */,
 				9B649F0B2F4DD4D300EC57E6 /* Frameworks */,
 				9B649F0C2F4DD4D300EC57E6 /* Resources */,
+				9B649F5F2F4DEAFA00EC57E6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9B649F5D2F4DEAFA00EC57E6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				9B649F102F4DD4D300EC57E6 /* Order Manager */,
@@ -69,6 +143,28 @@
 			productName = "Order Manager";
 			productReference = 9B649F0E2F4DD4D300EC57E6 /* Order Manager.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9B649F472F4DEAF800EC57E6 /* OrderMonitorWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B649F632F4DEAFA00EC57E6 /* Build configuration list for PBXNativeTarget "OrderMonitorWidgetExtension" */;
+			buildPhases = (
+				9B649F442F4DEAF800EC57E6 /* Sources */,
+				9B649F452F4DEAF800EC57E6 /* Frameworks */,
+				9B649F462F4DEAF800EC57E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9B649F4E2F4DEAF800EC57E6 /* OrderMonitorWidget */,
+			);
+			name = OrderMonitorWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = OrderMonitorWidgetExtension;
+			productReference = 9B649F482F4DEAF800EC57E6 /* OrderMonitorWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					9B649F0D2F4DD4D300EC57E6 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					9B649F472F4DEAF800EC57E6 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				9B649F0D2F4DD4D300EC57E6 /* Order Manager */,
+				9B649F472F4DEAF800EC57E6 /* OrderMonitorWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9B649F0C2F4DD4D300EC57E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B649F462F4DEAF800EC57E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B649F442F4DEAF800EC57E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B649F5D2F4DEAFA00EC57E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B649F472F4DEAF800EC57E6 /* OrderMonitorWidgetExtension */;
+			targetProxy = 9B649F5C2F4DEAFA00EC57E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9B649F172F4DD4D400EC57E6 /* Debug */ = {
@@ -253,6 +375,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ZangTee Monitor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +409,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ZangTee Monitor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +427,64 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9B649F602F4DEAFA00EC57E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OrderMonitorWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OrderMonitorWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zangtee.Order-Manager.OrderMonitorWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B649F612F4DEAFA00EC57E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OrderMonitorWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OrderMonitorWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zangtee.Order-Manager.OrderMonitorWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,6 +509,15 @@
 			buildConfigurations = (
 				9B649F1A2F4DD4D400EC57E6 /* Debug */,
 				9B649F1B2F4DD4D400EC57E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B649F632F4DEAFA00EC57E6 /* Build configuration list for PBXNativeTarget "OrderMonitorWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B649F602F4DEAFA00EC57E6 /* Debug */,
+				9B649F612F4DEAFA00EC57E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

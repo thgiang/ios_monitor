@@ -1,7 +1,10 @@
 import SwiftUI
 
 struct DashboardView: View {
-    @StateObject private var viewModel = DashboardViewModel()
+    @EnvironmentObject private var viewModel: DashboardViewModel
+    @State private var showingConfig = false
+    @AppStorage(AppConfig.monitorAllURLKey) private var monitorAllURL: String = ""
+    @AppStorage(AppConfig.monitorStoreURLKey) private var monitorStoreURL: String = ""
     
     var body: some View {
         NavigationView {
@@ -60,6 +63,15 @@ struct DashboardView: View {
                 }
             }
             .navigationTitle("ZangTee Monitor")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showingConfig = true
+                    }) {
+                        Image(systemName: "gearshape")
+                    }
+                }
+            }
             .refreshable {
                 await viewModel.refreshData()
             }
@@ -67,6 +79,19 @@ struct DashboardView: View {
                 if viewModel.isLoading && viewModel.stores.isEmpty {
                     ProgressView("Đang tải...")
                 }
+            }
+            .onAppear {
+                if monitorAllURL.isEmpty || monitorStoreURL.isEmpty {
+                    showingConfig = true
+                }
+            }
+            .sheet(isPresented: $showingConfig) {
+                ConfigView()
+                    .onDisappear {
+                        Task {
+                            await viewModel.refreshData()
+                        }
+                    }
             }
         }
     }

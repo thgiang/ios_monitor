@@ -25,6 +25,7 @@ class DashboardViewModel: ObservableObject {
             let fetchedStores = try await networkManager.fetchMonitorAll()
             self.stores = fetchedStores
             self.lastUpdated = Date()
+            LiveActivityManager.shared.updateActivity(stores: fetchedStores)
         } catch {
             print("Error refreshing data: \(error)")
         }
