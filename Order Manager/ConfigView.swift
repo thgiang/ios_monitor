@@ -5,6 +5,7 @@ struct ConfigView: View {
     
     @State private var tempMonitorAllURL: String = AppConfig.monitorAllURL
     @State private var tempMonitorStoreURL: String = AppConfig.monitorStoreURL
+    @State private var tempPushTokenURL: String = AppConfig.pushTokenURL
     
     @State private var showingError = false
     @State private var errorMessage = ""
@@ -12,13 +13,20 @@ struct ConfigView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Cấu hình API"), footer: Text("Vui lòng nhập đầy đủ cả hai đường dẫn URL để ứng dụng có thể lấy dữ liệu.")) {
+                Section(header: Text("Cấu hình API"), footer: Text("Vui lòng nhập đầy đủ các đường dẫn URL để ứng dụng có thể lấy dữ liệu.")) {
                     TextField("URL Monitor All", text: $tempMonitorAllURL)
                         .keyboardType(.URL)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                     
                     TextField("URL Monitor Store (prefix)", text: $tempMonitorStoreURL)
+                        .keyboardType(.URL)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
+                }
+                
+                Section(header: Text("Live Activity Push"), footer: Text("URL để đăng ký push token cho Live Activity. Để trống nếu không sử dụng.")) {
+                    TextField("URL đăng ký Push Token", text: $tempPushTokenURL)
                         .keyboardType(.URL)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
@@ -52,6 +60,7 @@ struct ConfigView: View {
         
         AppConfig.monitorAllURL = tempMonitorAllURL
         AppConfig.monitorStoreURL = tempMonitorStoreURL
+        AppConfig.pushTokenURL = tempPushTokenURL
         
         dismiss()
     }

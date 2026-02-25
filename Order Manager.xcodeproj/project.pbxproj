@@ -51,11 +51,21 @@
 			);
 			target = 9B649F472F4DEAF800EC57E6 /* OrderMonitorWidgetExtension */;
 		};
+		9B649F702F4F3CE600EC57E6 /* Exceptions for "Order Manager" folder in "Order Manager" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Order-Manager-Info.plist",
+			);
+			target = 9B649F0D2F4DD4D300EC57E6 /* Order Manager */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9B649F102F4DD4D300EC57E6 /* Order Manager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9B649F702F4F3CE600EC57E6 /* Exceptions for "Order Manager" folder in "Order Manager" target */,
+			);
 			path = "Order Manager";
 			sourceTree = "<group>";
 		};
@@ -371,10 +381,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Order Manager/Order Manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Order-Manager-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "ZangTee Monitor";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
@@ -405,10 +417,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Order Manager/Order Manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Order-Manager-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "ZangTee Monitor";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
