@@ -384,6 +384,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Order Manager/Order Manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LVMGDRAPSY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Order-Manager-Info.plist";
@@ -420,6 +421,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Order Manager/Order Manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LVMGDRAPSY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Order-Manager-Info.plist";
@@ -484,6 +486,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LVMGDRAPSY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OrderMonitorWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OrderMonitorWidget;
